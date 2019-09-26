@@ -15,6 +15,9 @@ namespace LibraryManagement
             if (TryToLogin(username, password))
             {
                 Console.WriteLine("Login complete successfully");
+                Console.WriteLine("Press any key to continue...");
+                Console.ReadKey(true);
+                Console.Clear();
             }else
             {
                 Console.WriteLine("Login failed");
@@ -35,7 +38,7 @@ namespace LibraryManagement
 
         public static void ResetInputCharacter()
         {
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
     }
 }
