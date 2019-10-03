@@ -9,9 +9,17 @@ namespace LibraryManagement
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-
+                conn.Open();
+                string cmd = string.Format("SELECT username FROM userList WHERE username = '{0}'", user);
+                SqlCommand command = new SqlCommand(cmd, conn);
+                if (command.ExecuteScalar() != null)
+                {
+                    return true;
+                }else
+                {
+                    return false;
+                }
             }
-            return false;
         }
     }
 }
