@@ -26,16 +26,6 @@ namespace LibraryManagement
             }
         }
 
-        private static void SignUp()
-        {
-            Console.Write("Username : ");
-            string user = Console.ReadLine();
-
-            Console.Write("Password : ");
-            string pass = Console.ReadLine();
-
-
-        }
         private static bool TryToLogin(string username, string password)
         {
             return username == "sa" && password == "123456Az";

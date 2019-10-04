@@ -7,14 +7,25 @@ namespace LibraryManagement
     {
         static void Main(string[] args)
         {
-            //Console.OutputEncoding = Encoding.UTF8;
-            //Console.WriteLine("Welcome you to Library Management Tool");
-            //Console.WriteLine("First you need to login");
-            //LibraryManagement.LoginSupports.RequestLogin();
-            //ShowMenu();
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.WriteLine("Welcome you to Library Management Tool");
+            Console.Write("Do you have account??(Y/N) : ");
+            string c = Console.ReadLine().ToUpper();
+            while (c != "N" && c != "y")
+            {
+                Console.Write("Please input Y/N : ");
+                c = Console.ReadLine().ToUpper();
+            }
+            if (c == "Y")
+            {
+                Console.WriteLine("First you need to login");
+                LibraryManagement.LoginSupports.RequestLogin();
+                ShowMenu();
+            }
+            else
+            {
 
-            Console.Write("Enter username : ");
-            Console.WriteLine(SignIn.IsBirthday(Console.ReadLine()));
+            }
         }
 
         static void ShowMenu()
